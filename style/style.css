@@ -419,7 +419,7 @@ top: 0;
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(/022b121bae9226d895a5c1805d3fac23.png);
+  background-image: url(img/022b121bae9226d895a5c1805d3fac23.png);
   mix-blend-mode: overlay;
   background-size: 19%;
 }
@@ -609,7 +609,7 @@ top: 0;
 
 .add-more-button::before {
   content: "";
-  background-image: url(/Button.svg);
+  background-image: url(img/Button.svg);
 
   width: 125px;
   height: 40px;
@@ -628,11 +628,13 @@ top: 0;
 }
 
 .weekly-wrapper {
-  display: flex;
-  background: linear-gradient(93.88deg, rgba(255, 74, 183, 0.3) 0%, rgba(255, 74, 183, 0.06) 100%);
-  border-radius: 8px;
-  gap: 15px;
-  padding: 12px 12px;
+  display: flex
+  ;
+      background: linear-gradient(93.88deg, rgba(255, 74, 183, 0.3) 0%, rgba(255, 74, 183, 0.06) 100%);
+      border-radius: 8px;
+      gap: 15px;
+      padding: 12px 12px;
+      align-items: center;
 }
 
 .weekly-bonus-block h2 {
@@ -667,6 +669,8 @@ top: 0;
   border-radius: 100px;
   border: 1px solid rgba(255, 155, 60, 0.8);
   padding: 12px 24px;
+  width: 73px;
+  height: 40px;
 }
 
 .vip-concierge-block {
