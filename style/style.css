@@ -213,11 +213,22 @@ legend {
   display: block;
 }
 
+.container{
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   overflow: hidden;
+}
+.header__icon{
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 .header__arrow-back,
 .header__notification {
@@ -226,6 +237,17 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-end;
+}
+
+.header__edit{
+  width: 24px;
+  height: 24px;
+  background: url('../img/edit.svg') no-repeat;
+  background-size: cover;
+}
+.header__close{
+  display: none;
 }
 
 .welcome {
@@ -521,7 +543,7 @@ top: 0;
   width: 100%;
   height: 10px;
   background: #575757;
-  margin-bottom: 12 px;
+  margin-bottom: 12px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -785,4 +807,47 @@ color: #fff;
 
 .vip-concierge-block{
     margin-bottom: 50px;
+}
+
+
+/* адоптив */
+@media (min-width: 768px) {
+  .tabs{
+    display: none;
+  }
+  .tab-content{
+    display: block;
+  }
+  .wrapper-tablet{
+    display: flex;
+  }
+  .wrapper-tablet__right{
+    flex: 1 1 calc(320 / 770 * 100%);
+  }
+  .wrapper-tablet__left{
+    flex: 1 1 calc(402 / 770 * 100%);
+    margin-top: 75px;
+  }
+  .vip-concierge-block--week{
+    display: none;
+  }
+  .weekly-bonus-block{
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    justify-content: flex-end;
+  }
+  .header__arrow-back{
+    display: none;
+  }
+  .header__close{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('../img/close.svg') no-repeat;
+    background-size: cover;
+  }
 }
