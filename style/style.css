@@ -521,7 +521,7 @@ top: 0;
   width: 100%;
   height: 10px;
   background: #575757;
-  margin-bottom: 12 px;
+  margin-bottom: 12px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -785,4 +785,24 @@ color: #fff;
 
 .vip-concierge-block{
     margin-bottom: 50px;
+}
+
+
+/* адоптив */
+@media (min-width: 768px) {
+  .tabs{
+    display: none;
+  }
+  .tab-content{
+    display: block;
+  }
+  .wrapper-tablet{
+    display: flex;
+  }
+  .vip-concierge-block--week{
+    display: none;
+  }
+  .weekly-bonus-block{
+    margin-bottom: 48px;
+  }
 }
