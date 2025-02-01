@@ -1080,6 +1080,197 @@ legend {
 	background-size: cover;
 }
 
+/* profile */
+.profile__header {
+	flex-direction: column;
+}
+.profile .header__arrow-back {
+	justify-content: flex-start;
+	align-self: flex-start;
+}
+.profile .welcome {
+	padding: 0;
+}
+.profile .welcome__title {
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+}
+.profile .header__arrow-back {
+	padding: 10px 0;
+}
+.input-block {
+	position: relative;
+}
+.profile-info {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin: 0;
+}
+
+.profile-info label {
+	top: 17px;
+}
+.profile-info__input {
+	margin: 0;
+}
+.profile-info__input[type='tel'] {
+	padding-left: 75px !important;
+}
+.profile-info__input:focus + label,
+.profile-info__input:not(:placeholder-shown) + label {
+	top: -10px;
+	left: 16px;
+	font-size: 12px;
+	background: rgb(27, 27, 27);
+	padding: 2px 4px;
+	color: rgb(163, 163, 163);
+	border-radius: 2px;
+}
+
+.iti.iti--allow-dropdown.iti--show-flags.iti--inline-dropdown {
+	width: 100%;
+}
+.iti__search-input{
+	visibility: hidden;
+}
+.iti__selected-country-primary .iti__flag {
+	background: none;
+	border: none;
+	box-shadow: none;
+	position: relative;
+}
+.iti__selected-country-primary .iti__flag::before {
+	content: '';
+}
+
+.iti__country-container:has(.iti__hide) .iti__flag.iti__globe::before {
+	color: rgb(163, 163, 163);
+}
+.iti__selected-country-primary .iti__flag.iti__globe::before {
+	content: 'code';
+	color: rgb(255, 255, 255);
+	position: absolute;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	transition: color 0.3s;
+}
+.iti__country-container:has(.iti__hide) .iti__arrow::after {
+	transform: rotate(0deg);
+	background-color: rgb(163, 163, 163);
+}
+.iti__arrow {
+	margin-left: 33px;
+	position: relative;
+	border: none;
+}
+.selected-country-choosed .iti__arrow::after {
+	top: -4px;
+}
+.iti__arrow::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 6px;
+	background-color: white;
+	display: inline-block;
+	mask: url('../img/arrow-accord.svg') no-repeat;
+	mask-size: contain;
+	top: -2px;
+	left: -2px;
+	transform: rotate(-180deg);
+	transition: all 0.3s;
+}
+.profile__content .tel-choose-label {
+	top: -10px;
+	left: 16px;
+	font-size: 12px;
+	background: rgb(27, 27, 27);
+	padding: 2px 4px;
+	color: rgb(163, 163, 163);
+	border-radius: 2px;
+}
+
+.selected-country-choosed .iti__selected-dial-code {
+	order: -1;
+	margin-left: 16px;
+	color: white;
+	font-size: 14px;
+}
+.selected-country-choosed .iti__arrow {
+	margin-left: -14px;
+}
+
+.profile__content .selected-country-choosed .iti__arrow::after {
+	transform: rotate(-180deg);
+	background-color: rgb(255, 255, 255);
+}
+
+.iti--inline-dropdown .iti__dropdown-content {
+	border: none;
+	box-shadow: none;
+	margin-top: 10px;
+	background-color: transparent;
+}
+.iti__country-list {
+	background-color: #353535;
+	border-radius: 16px;
+	padding: 16px 10px;
+}
+
+.iti__country-list::-webkit-scrollbar {
+	width: 5px;
+	
+}
+
+.iti__country-list::-webkit-scrollbar-track {
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+.iti__country-list::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #575757;
+	height: 64px;
+}
+
+.iti__country {
+	display: grid;
+	grid-template-columns: 36px 16px auto;
+	column-gap: 8px;
+}
+.iti__country-list .iti__flag,
+.iti__country-name {
+	margin-right: 0;
+}
+.iti__dial-code {
+	order: -1;
+	color: white;
+}
+.iti__country-name {
+	color: #727272;
+}
+
+.btn-submit{
+	color: #1B1B1B;
+	border-radius: 100px;
+	/* Neutral/100 */
+	background: rgb(255, 255, 255);
+	opacity: 0.8;
+	padding: 12px 24px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 14px;
+}
+.btn-submit--disable{
+	color: rgb(114, 114, 114);
+	background: rgb(53, 53, 53);
+	opacity: 0.3;
+}
+
 /* адоптив */
 @media (min-width: 600px) {
 	.brand-selection__header {
@@ -1164,10 +1355,13 @@ legend {
 		max-width: 730px;
 		grid-template-columns: repeat(5, 1fr);
 	}
-	.brand-selection .header__arrow-back{
+	.brand-selection .header__arrow-back {
 		display: block;
 	}
-	.brand-selection .header{
+	.brand-selection .header {
 		justify-content: flex-start;
+	}
+	.brand-selection__header {
+		max-width: none;
 	}
 }
