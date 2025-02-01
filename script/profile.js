@@ -2,6 +2,7 @@
 
 (() => {
 
+  // когда будет введено 3 символа в поле name то будет разблокированна кнопка
   const nameInput = document.querySelector("#name-input")
   nameInput.addEventListener('input',(e)=>{
     if(nameInput.value.length >=3 ){
@@ -115,5 +116,21 @@
     console.log(number);
     
   })
+
+  // показать - скрыть пароль
+  document.querySelectorAll('.password-show').forEach(el => {
+    el.addEventListener('click', () => {
+      let input = el.previousElementSibling; // input на который нажали
+      if (input.type === 'password') {
+        input.type = 'text';
+        el.classList.contains('_hide') && el.classList.remove('_hide');
+        el.classList.add('_show');
+      } else {
+        input.type = 'password';
+        el.classList.contains('_show') && el.classList.remove('_show');
+        el.classList.add('_hide');
+      }
+    });
+  });
 
 })();

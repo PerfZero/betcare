@@ -1081,8 +1081,19 @@ legend {
 }
 
 /* profile */
+.profile{
+	padding-bottom: 20px;
+}
 .profile__header {
 	flex-direction: column;
+	padding-bottom: 10px;
+}
+.profile__title {
+	padding-left: 20px;
+	color: white;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
 }
 .profile .header__arrow-back {
 	justify-content: flex-start;
@@ -1100,6 +1111,12 @@ legend {
 .profile .header__arrow-back {
 	padding: 10px 0;
 }
+.profile__content {
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+}
+
 .input-block {
 	position: relative;
 }
@@ -1107,7 +1124,7 @@ legend {
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
-	margin: 0;
+	margin: 24px 0 0;
 }
 
 .profile-info label {
@@ -1133,7 +1150,7 @@ legend {
 .iti.iti--allow-dropdown.iti--show-flags.iti--inline-dropdown {
 	width: 100%;
 }
-.iti__search-input{
+.iti__search-input {
 	visibility: hidden;
 }
 .iti__selected-country-primary .iti__flag {
@@ -1223,7 +1240,6 @@ legend {
 
 .iti__country-list::-webkit-scrollbar {
 	width: 5px;
-	
 }
 
 .iti__country-list::-webkit-scrollbar-track {
@@ -1254,8 +1270,23 @@ legend {
 	color: #727272;
 }
 
-.btn-submit{
-	color: #1B1B1B;
+.password-show {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 16px;
+	top: 18px;
+	background-size: contain;
+}
+.password-show._hide {
+	background-image: url('../img/hide.svg');
+}
+.password-show._show {
+	background-image: url('../img/show.svg');
+}
+
+.btn-submit {
+	color: #1b1b1b;
 	border-radius: 100px;
 	/* Neutral/100 */
 	background: rgb(255, 255, 255);
@@ -1265,10 +1296,30 @@ legend {
 	font-weight: 600;
 	line-height: 14px;
 }
-.btn-submit--disable{
+.btn-submit--disable {
 	color: rgb(114, 114, 114);
 	background: rgb(53, 53, 53);
 	opacity: 0.3;
+}
+
+.change-success-password{
+	color: rgb(192, 23, 96);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 14px;
+	text-align: center;
+	position: relative;
+}
+.change-success-password p::before{
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/success.svg) no-repeat;
+	background-size: contain;
+	position: relative;
+	top: 3px;
+	left: -10px;
 }
 
 /* адоптив */

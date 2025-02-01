@@ -14,11 +14,12 @@
 					<img src="img/arrow.svg" alt="" />
 				</div>
 				<div class="welcome">
-					<h2 class="welcome__title">Personal info</h2>
+					
 				</div>
 			</header>
 			<div class="profile__content">
 				<div class="profile-info-date">
+					<h2 class="profile__title">Personal info</h2>
 					<form action="#" class="brand-selection__form profile-info">
 						<div class="input-block">
 							<input
@@ -56,6 +57,42 @@
 							<!-- <label>E-mail</label> -->
 						</div>
 						<button class="profile-info__submit btn-submit btn-submit--disable" disabled>Save</button>
+					</form>
+				</div>
+				<div class="profile-info-date">
+					<h2 class="profile__title">Change password</h2>
+					<form action="#" class="brand-selection__form profile-info">
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>Current password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>New password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>Repeat new password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<button class="password-submit btn-submit btn-submit--disable" disabled>Confirm</button>
+						<div class="change-success-password">
+							<p>Successfully saved</p>
+						</div>
 					</form>
 				</div>
 			</div>
