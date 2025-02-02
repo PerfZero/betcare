@@ -1350,6 +1350,15 @@ legend {
 	.bg-cs-bottom::after {
 		right: 0;
 	}
+
+	.profile-info-date{
+		max-width: 420px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.profile-info{
+		margin-top: 24px;
+	}
 }
 @media (min-width: 768px) {
 	.tabs {
@@ -1414,5 +1423,17 @@ legend {
 	}
 	.brand-selection__header {
 		max-width: none;
+	}
+
+	.container .profile{
+		max-width: 892px;
+	}
+	.profile .header__arrow-back{
+		display: block;
+	}
+	.profile__content{
+		max-width: 794px;
+		flex-direction: row;
+		margin: 48px auto 0;
 	}
 }
