@@ -76,3 +76,38 @@ function transferBlockBonuc(){
 
   contentInsert.append(weeklyBonus);
 }
+
+// раскрытие текста на уведомлениях
+document.addEventListener("click", (e)=>{
+	var el = e.target;
+	if(el.classList.contains("notif-message__content")){
+		el.querySelector(".notif-message__text").classList.toggle("notif-message__text--all")
+	}
+
+	
+})
+
+const notifBody = document.querySelector(".container.notificate") // тело уведомлений
+
+// открытие уведемлений 
+const notifOpen = document.querySelector(".header__notification")
+notifOpen.addEventListener("click", (e)=>{
+	notifBody.classList.add("notificate--open")
+	document.body.classList.add("scroll-block")
+	document.querySelector(".blur").classList.remove("d-none")
+	e.notifIsOpen = true
+})
+
+// закрытие уведомлений
+const notifClose = document.querySelector(".notificate__close")
+notifClose.addEventListener("click", ()=>{
+	notifBody.classList.remove("notificate--open")
+	document.body.classList.remove("scroll-block")
+	document.querySelector(".blur").classList.add("d-none")
+})
+
+document.querySelector(".blur").addEventListener("click", ()=>{
+	notifBody.classList.remove("notificate--open")
+	document.body.classList.remove("scroll-block")
+	document.querySelector(".blur").classList.add("d-none")
+})
