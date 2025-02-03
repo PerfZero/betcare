@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/intlTelInput.min.css">
+		<link rel="stylesheet" href="style/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container profile">
+			<header class="header profile__header">
+				<div class="header__arrow-back">
+					<img src="img/arrow.svg" alt="" />
+				</div>
+				<div class="welcome">
+					
+				</div>
+			</header>
+			<div class="profile__content">
+				<div class="profile-info-date">
+					<h2 class="profile__title">Personal info</h2>
+					<form action="#" class="brand-selection__form profile-info">
+						<div class="input-block">
+							<input
+								type="text"
+								class="brand-selection__search profile-info__input"
+								id="name-input"
+								placeholder=" "
+							/>
+							<label>Name</label>
+						</div>
+						<div class="input-block">
+							<input
+								type="text"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>Surname</label>
+						</div>
+						<div class="input-block">
+							<input
+								type="email"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>E-mail</label>
+						</div>
+                        <div class="input-block">
+							<input
+								type="tel"
+								class="brand-selection__search profile-info__input"
+                                id="phone-number"
+                                placeholder="(xx) xxx-xx-xx"
+							/>
+							<label class="tel-choose-label">Phone number (optional)</label>
+							<!-- <label>E-mail</label> -->
+						</div>
+						<button class="profile-info__submit btn-submit btn-submit--disable" disabled>Save</button>
+					</form>
+				</div>
+				<div class="profile-info-date">
+					<h2 class="profile__title">Change password</h2>
+					<form action="#" class="brand-selection__form profile-info">
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>Current password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>New password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<div class="input-block">
+							<input
+								type="password"
+								class="brand-selection__search profile-info__input"
+								placeholder=" "
+							/>
+							<label>Repeat new password</label>
+							<button type="button" class="password-show _show"></button>
+						</div>
+						<button class="password-submit btn-submit btn-submit--disable" disabled>Confirm</button>
+						<div class="change-success-password">
+							<p>Successfully saved</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+        <script src="script/plugins/intlTelInput.min.js"></script>
+		<script src="script/profile.js"></script>
+	</body>
+</html>
